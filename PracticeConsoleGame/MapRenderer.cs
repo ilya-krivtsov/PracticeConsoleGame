@@ -31,10 +31,10 @@ public class MapRenderer
 
     public void DrawMap()
     {
-        for (int y = 0; y < Map.Height; ++y)
+        for (int y = 0; y <= _map.Height; ++y)
         {
             Console.SetCursorPosition(0, y);
-            for (int x = 0; x < Map.Width; ++x)
+            for (int x = 0; x <= _map.Width; ++x)
             {
                 Console.Write(_map.GetTile(x, y) ? '#' : ' ');
             }
@@ -44,12 +44,10 @@ public class MapRenderer
 
     public void RedrowPlayer()
     {
-        Console.CursorLeft = _lastPlayerX;
-        Console.CursorTop = _lastPlayerY;
+        Console.SetCursorPosition(_lastPlayerX, _lastPlayerY);
         Console.Write(' ');
 
-        Console.CursorLeft = _map.PlayerX;
-        Console.CursorTop = _map.PlayerY;
+        Console.SetCursorPosition(_map.PlayerX, _map.PlayerY);
         Console.Write('@');
 
         _lastPlayerX = _map.PlayerX;
