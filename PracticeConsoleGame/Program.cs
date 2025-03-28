@@ -1,10 +1,9 @@
 using PracticeConsoleGame;
 
+var map = new Map(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "map.txt"));
+
 var eventLoop = new EventLoop();
 
-eventLoop.LeftKeyPress += () => Console.WriteLine("left");
-eventLoop.RightKeyPress += () => Console.WriteLine("right");
-eventLoop.UpKeyPress += () => Console.WriteLine("up");
-eventLoop.DownKeyPress += () => Console.WriteLine("down");
+var game = new Game(eventLoop, map);
 
 eventLoop.Run();
