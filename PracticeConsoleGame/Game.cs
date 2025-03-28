@@ -9,6 +9,7 @@ public class Game
     {
         this.map = map;
         renderer = new(map);
+        renderer.Redraw();
 
         loop.LeftKeyPress += () => Move(-1, 0);
         loop.RightKeyPress += () => Move(1, 0);
