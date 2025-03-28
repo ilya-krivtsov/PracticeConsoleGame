@@ -3,8 +3,6 @@ namespace PracticeConsoleGame;
 public class MapRenderer
 {
     private Map _map;
-    private int _mapWight;
-    private int _mapHeight;
     private int _lastPlayerX;
     private int _lastPlayerY;
 
@@ -24,6 +22,7 @@ public class MapRenderer
     {
         if (_firstDraw)
         {
+            Console.Clear();
             DrawMap();
             _firstDraw = false;
         }
@@ -32,10 +31,10 @@ public class MapRenderer
 
     public void DrawMap()
     {
-        for (int y = 0; y < _mapWight; ++y)
+        for (int y = 0; y < Map.Height; ++y)
         {
             Console.SetCursorPosition(0, y);
-            for (int x = 0; x < _mapHeight; ++x)
+            for (int x = 0; x < Map.Width; ++x)
             {
                 Console.Write(_map.GetTile(x, y) ? '#' : ' ');
             }
