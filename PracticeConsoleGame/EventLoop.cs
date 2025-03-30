@@ -1,18 +1,24 @@
-namespace PracticeConsoleGame;
-
-public class EventLoop
+namespace PracticeConsoleGame
 {
-    public event Action LeftKeyPress = () => { };
-    public event Action RightKeyPress = () => { };
-    public event Action UpKeyPress = () => { };
-    public event Action DownKeyPress = () => { };
-
-    public void Run()
+    public class EventLoop
     {
-        while (true)
+        public event Action LeftKeyPress = () => { };
+        public event Action RightKeyPress = () => { };
+        public event Action UpKeyPress = () => { };
+        public event Action DownKeyPress = () => { };
+
+        public void Run()
         {
-            var key = Console.ReadKey(true);
-            switch (key.Key)
+            while (true)
+            {
+                var key = Console.ReadKey(true);
+                HandleKeyPress(key.Key);
+            }
+        }
+
+        public void HandleKeyPress(ConsoleKey key)
+        {
+            switch (key)
             {
                 case ConsoleKey.LeftArrow:
                 case ConsoleKey.A:

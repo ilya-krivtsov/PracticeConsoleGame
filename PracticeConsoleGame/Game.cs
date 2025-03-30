@@ -30,6 +30,11 @@ public class Game
             return;
         }
 
+        if (newX > map.Width || newY > map.Height)
+        {
+            return;
+        }
+
         map.PlayerX = newX;
         map.PlayerY = newY;
 
