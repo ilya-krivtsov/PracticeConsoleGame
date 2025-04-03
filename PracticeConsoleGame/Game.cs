@@ -30,7 +30,7 @@ public class Game
             return;
         }
 
-        if (newX > map.Width || newY > map.Height)
+        if (newX > map.Width || newY > map.Height || newX < 0 || newY < 0)
         {
             return;
         }
