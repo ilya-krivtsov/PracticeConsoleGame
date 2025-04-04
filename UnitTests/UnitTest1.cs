@@ -74,7 +74,7 @@ public class MapTests
         loop.HandleKeyPress(Down());
         loop.HandleKeyPress(Up());
 
-        Assert.AreEqual(0, map.PlayerX);
+        Assert.That(map.PlayerX, Is.EqualTo(0));
         Assert.AreEqual(0, map.PlayerY);
     }
 

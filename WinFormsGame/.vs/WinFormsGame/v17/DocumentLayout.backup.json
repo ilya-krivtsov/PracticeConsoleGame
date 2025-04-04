@@ -1,10 +1,33 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\user\\source\\repos\\WinFormsGame\\",
+  "WorkspaceRootPath": "C:\\Users\\user\\source\\PracticeConsoleGame\\WinFormsGame\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E0BFA954-8475-429C-882D-0A2C113965EE}|WinFormsGame.csproj|c:\\users\\user\\source\\repos\\winformsgame\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{E0BFA954-8475-429C-882D-0A2C113965EE}|WinFormsGame.csproj|c:\\users\\user\\source\\practiceconsolegame\\winformsgame\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0BFA954-8475-429C-882D-0A2C113965EE}|WinFormsGame.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0BFA954-8475-429C-882D-0A2C113965EE}|WinFormsGame.csproj|c:\\users\\user\\source\\practiceconsolegame\\winformsgame\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{E0BFA954-8475-429C-882D-0A2C113965EE}|WinFormsGame.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D9737D7-71EA-15DA-C4EC-2644F627A4FE}|..\\PracticeConsoleGame\\PracticeConsoleGame.csproj|c:\\users\\user\\source\\practiceconsolegame\\practiceconsolegame\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D9737D7-71EA-15DA-C4EC-2644F627A4FE}|..\\PracticeConsoleGame\\PracticeConsoleGame.csproj|c:\\users\\user\\source\\practiceconsolegame\\practiceconsolegame\\map.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D9737D7-71EA-15DA-C4EC-2644F627A4FE}|..\\PracticeConsoleGame\\PracticeConsoleGame.csproj|c:\\users\\user\\source\\practiceconsolegame\\practiceconsolegame\\map.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D9737D7-71EA-15DA-C4EC-2644F627A4FE}|..\\PracticeConsoleGame\\PracticeConsoleGame.csproj|c:\\users\\user\\source\\practiceconsolegame\\practiceconsolegame\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0BFA954-8475-429C-882D-0A2C113965EE}|WinFormsGame.csproj|c:\\users\\user\\source\\practiceconsolegame\\winformsgame\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0BFA954-8475-429C-882D-0A2C113965EE}|WinFormsGame.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D9737D7-71EA-15DA-C4EC-2644F627A4FE}|..\\PracticeConsoleGame\\PracticeConsoleGame.csproj|c:\\users\\user\\source\\practiceconsolegame\\practiceconsolegame\\eventloop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +37,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -37,18 +60,6 @@
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\WinFormsGame\\Form1.cs",
-              "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\WinFormsGame\\Form1.cs [Design]",
-              "RelativeToolTip": "Form1.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T12:58:03.834Z",
-              "EditorCaption": " [Design]"
-            },
-            {
               "$type": "Bookmark",
               "Name": "ST:0:0:{a0c5197d-0ac7-4b63-97cd-8872a789d233}"
             },
@@ -59,6 +70,109 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\PracticeConsoleGame\\WinFormsGame\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\user\\source\\PracticeConsoleGame\\WinFormsGame\\Form1.cs",
+              "RelativeToolTip": "Form1.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAqwCAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-04T13:32:08.49Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "EventLoop.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\PracticeConsoleGame\\PracticeConsoleGame\\EventLoop.cs",
+              "RelativeDocumentMoniker": "..\\PracticeConsoleGame\\EventLoop.cs",
+              "ToolTip": "C:\\Users\\user\\source\\PracticeConsoleGame\\PracticeConsoleGame\\EventLoop.cs",
+              "RelativeToolTip": "..\\PracticeConsoleGame\\EventLoop.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-04T13:16:35.45Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\PracticeConsoleGame\\PracticeConsoleGame\\Program.cs",
+              "RelativeDocumentMoniker": "..\\PracticeConsoleGame\\Program.cs",
+              "ToolTip": "C:\\Users\\user\\source\\PracticeConsoleGame\\PracticeConsoleGame\\Program.cs",
+              "RelativeToolTip": "..\\PracticeConsoleGame\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-04T13:17:04.959Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\PracticeConsoleGame\\WinFormsGame\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\user\\source\\PracticeConsoleGame\\WinFormsGame\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-04T13:17:01.58Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "map.txt",
+              "DocumentMoniker": "C:\\Users\\user\\source\\PracticeConsoleGame\\PracticeConsoleGame\\map.txt",
+              "RelativeDocumentMoniker": "..\\PracticeConsoleGame\\map.txt",
+              "ToolTip": "C:\\Users\\user\\source\\PracticeConsoleGame\\PracticeConsoleGame\\map.txt",
+              "RelativeToolTip": "..\\PracticeConsoleGame\\map.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-04-04T13:12:14.058Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Map.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\PracticeConsoleGame\\PracticeConsoleGame\\Map.cs",
+              "RelativeDocumentMoniker": "..\\PracticeConsoleGame\\Map.cs",
+              "ToolTip": "C:\\Users\\user\\source\\PracticeConsoleGame\\PracticeConsoleGame\\Map.cs",
+              "RelativeToolTip": "..\\PracticeConsoleGame\\Map.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-04T13:04:17.009Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Game.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\PracticeConsoleGame\\PracticeConsoleGame\\Game.cs",
+              "RelativeDocumentMoniker": "..\\PracticeConsoleGame\\Game.cs",
+              "ToolTip": "C:\\Users\\user\\source\\PracticeConsoleGame\\PracticeConsoleGame\\Game.cs",
+              "RelativeToolTip": "..\\PracticeConsoleGame\\Game.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-04T13:04:10.626Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\user\\source\\PracticeConsoleGame\\WinFormsGame\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\user\\source\\PracticeConsoleGame\\WinFormsGame\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-04T12:58:03.834Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
             }
           ]
         }
