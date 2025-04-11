@@ -58,8 +58,9 @@ public partial class Form1 : Form
     private void ControlPaint(object sender, PaintEventArgs e)
     {
         var font = new Font("Arial", 10);
-        var wallBrush = new SolidBrush(Color.Red);
-        var playerBrush = new SolidBrush(Color.Green);
+        var wallBrush = new SolidBrush(Color.LimeGreen);
+        var playerBrush = new SolidBrush(Color.Blue);
+        var enemyBrush = new SolidBrush(Color.RebeccaPurple);
         Graphics formGraphics;
         formGraphics = this.CreateGraphics();
  
@@ -69,13 +70,18 @@ public partial class Form1 : Form
             {
                 if (game.Map.GetTile(x, y))
                 {
-                    formGraphics.FillRectangle(wallBrush, new Rectangle(x * 20, y * 20, 10, 10));
+                    formGraphics.FillRectangle(wallBrush, new Rectangle(x * 20, y * 20, 15, 15));
                 }
 
                 var entity = game.Map.Entities[x, y];
                 if (entity is Player)
                 {
-                    formGraphics.FillRectangle(playerBrush, new Rectangle(x * 20, y * 20, 10, 10));
+                    formGraphics.FillEllipse(playerBrush, x * 20, y * 20, 15, 15);
+                }
+
+                if (entity is Enemy)
+                {
+                    formGraphics.FillEllipse(enemyBrush, x * 20, y * 20, 15, 15);
                 }
             }
         }
