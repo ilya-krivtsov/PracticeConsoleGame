@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PracticeConsoleGame", "Prac
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{9397E458-B520-4A4D-B7A2-16E9591589BD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormsGame", "WinFormsGame\WinFormsGame.csproj", "{6BED605B-4B44-F8DC-FBF6-EB439F44031B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,6 +22,10 @@ Global
 		{9397E458-B520-4A4D-B7A2-16E9591589BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9397E458-B520-4A4D-B7A2-16E9591589BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9397E458-B520-4A4D-B7A2-16E9591589BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BED605B-4B44-F8DC-FBF6-EB439F44031B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BED605B-4B44-F8DC-FBF6-EB439F44031B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BED605B-4B44-F8DC-FBF6-EB439F44031B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BED605B-4B44-F8DC-FBF6-EB439F44031B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -27,8 +27,9 @@ System.Windows.Forms.PaintEventArgs e)
         int MaxWidth = 256;
 
         var font = new Font("Arial", 10);
-        System.Drawing.SolidBrush myBrush = new System.Drawing.SolidBrush(System.Drawing.Color.Red);
-        System.Drawing.Graphics formGraphics;
+        var wallBrush = new SolidBrush(Color.Red);
+        var playerBrush = new SolidBrush(Color.Green);
+        Graphics formGraphics;
         formGraphics = this.CreateGraphics();
  
         for (int y = 0; y < MaxHeight && y < lines.Length; y++)
@@ -40,7 +41,7 @@ System.Windows.Forms.PaintEventArgs e)
 
                 if (c == '#' || c == '@')
                 {
-                    formGraphics.FillRectangle(myBrush, new Rectangle(x * 20, y * 20, 10, 10));
+                    formGraphics.FillRectangle(wallBrush, new Rectangle(x * 20, y * 20, 10, 10));
                 }
             }
         }
