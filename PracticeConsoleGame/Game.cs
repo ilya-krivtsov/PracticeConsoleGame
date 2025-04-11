@@ -2,21 +2,24 @@ namespace PracticeConsoleGame;
 
 public class Game
 {
-    private Map map;
-    private MapRenderer renderer;
+    public Map Map { get; }
+    private GameRenderer renderer;
 
-    private Player player;
+    public Player Player { get; }
 
     private readonly List<Entity> entities = [];
 
     public Game(EventLoop loop, Map map)
     {
-        this.map = map;
-        renderer = new(map);
+        Map = map;
+        renderer = new(this);
         renderer.Redraw();
 
-        player = new(map);
-        entities.Add(player);
+        Player = new(map);
+        entities.Add(Player);
+        Player.X = map.PlayerStartX;
+        Player.Y = map.PlayerStartY;
+        map.Entities[Player.X, Player.Y] = Player;
 
         loop.LeftKeyPress += () => Move(-1, 0);
         loop.RightKeyPress += () => Move(1, 0);
@@ -26,7 +29,7 @@ public class Game
 
     private void Move(int dx, int dy)
     {
-        player.Move(dx, dy);
+        Player.Move(dx, dy);
 
         foreach (var entity in entities)
         {

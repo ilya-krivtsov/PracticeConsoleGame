@@ -4,11 +4,8 @@ public class Player(Map map) : Entity(map)
 {
     public void Move(int dx, int dy)
     {
-        int x = Map.PlayerX;
-        int y = Map.PlayerY;
-
-        int newX = x + dx;
-        int newY = y + dy;
+        int newX = X + dx;
+        int newY = Y + dy;
 
         if (Map.GetTile(newX, newY))
         {
@@ -20,7 +17,10 @@ public class Player(Map map) : Entity(map)
             return;
         }
 
-        Map.PlayerX = newX;
-        Map.PlayerY = newY;
+        Map.Entities[X, Y] = null;
+        Map.Entities[newX, newY] = this;
+
+        X = newX;
+        Y = newY;
     }
 }

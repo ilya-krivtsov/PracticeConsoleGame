@@ -1,19 +1,19 @@
 namespace PracticeConsoleGame;
 
-public class MapRenderer
+public class GameRenderer
 {
-    private Map _map;
+    private Game game;
     private int _lastPlayerX;
     private int _lastPlayerY;
 
     private bool _firstDraw;
 
-    public MapRenderer(Map map)
+    public GameRenderer(Game game)
     {
-        _map = map;
+        this.game = game;
 
-        _lastPlayerX = map.PlayerX;
-        _lastPlayerY = map.PlayerY;
+        _lastPlayerX = game.Player.X;
+        _lastPlayerY = game.Player.Y;
 
         _firstDraw = true;
     }
@@ -31,12 +31,12 @@ public class MapRenderer
 
     public void DrawMap()
     {
-        for (int y = 0; y <= _map.Height; ++y)
+        for (int y = 0; y <= game.Map.Height; ++y)
         {
             Console.SetCursorPosition(0, y);
-            for (int x = 0; x <= _map.Width; ++x)
+            for (int x = 0; x <= game.Map.Width; ++x)
             {
-                Console.Write(_map.GetTile(x, y) ? '#' : ' ');
+                Console.Write(game.Map.GetTile(x, y) ? '#' : ' ');
             }
             Console.WriteLine();
         }
@@ -47,10 +47,10 @@ public class MapRenderer
         Console.SetCursorPosition(_lastPlayerX, _lastPlayerY);
         Console.Write(' ');
 
-        Console.SetCursorPosition(_map.PlayerX, _map.PlayerY);
+        Console.SetCursorPosition(game.Player.X, game.Player.X);
         Console.Write('@');
 
-        _lastPlayerX = _map.PlayerX;
-        _lastPlayerY = _map.PlayerY;
+        _lastPlayerX = game.Player.X;
+        _lastPlayerY = game.Player.Y;
     }
 }

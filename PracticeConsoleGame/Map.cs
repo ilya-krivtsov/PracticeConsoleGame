@@ -2,13 +2,14 @@ namespace PracticeConsoleGame;
 
 public class Map
 {
-
     public const int MaxHeight = 256;
     public const int MaxWidth = 256;
 
     public char[,] Grid { get; } = new char[MaxHeight, MaxWidth];
-    public int PlayerX { get; set; }
-    public int PlayerY { get; set; }
+    public int PlayerStartX { get; }
+    public int PlayerStartY { get; }
+
+    public Entity?[,] Entities { get; } = new Entity?[MaxHeight, MaxWidth];
 
     public int Width { get; private set; }
     public int Height { get; private set; }
@@ -34,8 +35,8 @@ public class Map
 
                 if (c == '@')
                 {
-                    PlayerX = x;
-                    PlayerY = y;
+                    PlayerStartX = x;
+                    PlayerStartY = y;
                 }
             }
         }
