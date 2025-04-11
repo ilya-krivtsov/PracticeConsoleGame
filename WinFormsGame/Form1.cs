@@ -10,7 +10,7 @@ public partial class Form1 : Form
     public Form1()
     {
         InitializeComponent();
-        this.Paint += new PaintEventHandler(ControlPaint);
+        this.Paint += ControlPaint;
         KeyDown += OnKeyDown;
 
         var map = new Map("map.txt"); 
@@ -21,7 +21,28 @@ public partial class Form1 : Form
 
     private void OnKeyDown(object? sender, KeyEventArgs e)
     {
-        // trigger event loop
+        switch(e.KeyCode)
+        {
+            case Keys.W:
+            case Keys.Up:
+                eventLoop.OnUp();
+                break;
+
+            case Keys.A:
+            case Keys.Left:
+                eventLoop.OnLeft();
+                break;
+
+            case Keys.S:
+            case Keys.Down:
+                eventLoop.OnDown();
+                break;
+
+            case Keys.D:
+            case Keys.Right:
+                eventLoop.OnRight();
+                break;
+        }
     }
 
     private void Form1_Load(object sender, EventArgs e)
@@ -29,36 +50,25 @@ public partial class Form1 : Form
 
     }
 
-    private void ControlPaint(object sender,
-System.Windows.Forms.PaintEventArgs e)
+    private void ControlPaint(object sender, PaintEventArgs e)
     {
-        var lines = File.ReadAllLines("map.txt");
-        int MaxHeight = 256;
-        int MaxWidth = 256;
-
         var font = new Font("Arial", 10);
         var wallBrush = new SolidBrush(Color.Red);
         var playerBrush = new SolidBrush(Color.Green);
         Graphics formGraphics;
         formGraphics = this.CreateGraphics();
  
-        for (int y = 0; y < MaxHeight && y < lines.Length; y++)
+        for (int y = 0; y < game.Map.Height; y++)
         {
-            var line = lines[y];
-            for (int x = 0; x < MaxWidth && x < line.Length; x++)
+            for (int x = 0; x < game.Map.Width; x++)
             {
-                char c = line[x];
-
-                if (c == '#')
+                if (game.Map.GetTile(x, y))
                 {
                     formGraphics.FillRectangle(wallBrush, new Rectangle(x * 20, y * 20, 10, 10));
                 }
-                else
-                {
-                    var entity = 
-                }
 
-                if (c == '@')
+                var entity = game.Map.Entities[x, y];
+                if (entity is Player)
                 {
                     formGraphics.FillRectangle(playerBrush, new Rectangle(x * 20, y * 20, 10, 10));
                 }
