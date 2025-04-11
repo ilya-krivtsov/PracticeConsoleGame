@@ -5,11 +5,18 @@ public class Game
     private Map map;
     private MapRenderer renderer;
 
+    private Player player;
+
+    private readonly List<Entity> entities = [];
+
     public Game(EventLoop loop, Map map)
     {
         this.map = map;
         renderer = new(map);
         renderer.Redraw();
+
+        player = new(map);
+        entities.Add(player);
 
         loop.LeftKeyPress += () => Move(-1, 0);
         loop.RightKeyPress += () => Move(1, 0);
@@ -19,24 +26,12 @@ public class Game
 
     private void Move(int dx, int dy)
     {
-        int x = map.PlayerX;
-        int y = map.PlayerY;
+        player.Move(dx, dy);
 
-        int newX = x + dx;
-        int newY = y + dy;
-    
-        if (map.GetTile(newX, newY))
+        foreach (var entity in entities)
         {
-            return;
+            entity.Move();
         }
-
-        if (newX > map.Width || newY > map.Height || newX < 0 || newY < 0)
-        {
-            return;
-        }
-
-        map.PlayerX = newX;
-        map.PlayerY = newY;
 
         renderer.Redraw();
     }
