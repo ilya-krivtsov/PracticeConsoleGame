@@ -1,17 +1,27 @@
 using PracticeConsoleGame;
-using System.Windows.Forms;
-using System.Drawing;
-using System.IO;
-using System.Windows.Forms;
 namespace WinFormsGame;
 
 public partial class Form1 : Form
 {
+    private Game game;
+
+    private FormEventLoop eventLoop;
 
     public Form1()
     {
         InitializeComponent();
         this.Paint += new PaintEventHandler(ControlPaint);
+        KeyDown += OnKeyDown;
+
+        var map = new Map("map.txt"); 
+
+        eventLoop = new();
+        game = new(eventLoop, map);
+    }
+
+    private void OnKeyDown(object? sender, KeyEventArgs e)
+    {
+        // trigger event loop
     }
 
     private void Form1_Load(object sender, EventArgs e)
@@ -39,9 +49,18 @@ System.Windows.Forms.PaintEventArgs e)
             {
                 char c = line[x];
 
-                if (c == '#' || c == '@')
+                if (c == '#')
                 {
                     formGraphics.FillRectangle(wallBrush, new Rectangle(x * 20, y * 20, 10, 10));
+                }
+                else
+                {
+                    var entity = 
+                }
+
+                if (c == '@')
+                {
+                    formGraphics.FillRectangle(playerBrush, new Rectangle(x * 20, y * 20, 10, 10));
                 }
             }
         }
@@ -50,5 +69,18 @@ System.Windows.Forms.PaintEventArgs e)
     private void button1_Click(object sender, EventArgs e)
     {
 
+    }
+
+    private class FormEventLoop : EventLoop
+    {
+        public override void Run()
+        {
+            
+        }
+
+        public void OnLeft() => OnLeftKey();
+        public void OnRight() => OnRightKey();
+        public void OnUp() => OnUpKey();
+        public void OnDown() => OnDownKey();
     }
 }
