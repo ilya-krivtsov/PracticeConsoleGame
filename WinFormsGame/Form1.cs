@@ -1,4 +1,5 @@
 using PracticeConsoleGame;
+using System.Diagnostics;
 namespace WinFormsGame;
 
 public partial class Form1 : Form
@@ -11,10 +12,10 @@ public partial class Form1 : Form
     {
         InitializeComponent();
         this.Paint += ControlPaint;
+
         KeyDown += OnKeyDown;
 
-        var map = new Map("map.txt"); 
-
+        var map = new Map("map.txt");
         eventLoop = new();
         game = new(eventLoop, map);
     }
@@ -42,7 +43,11 @@ public partial class Form1 : Form
             case Keys.Right:
                 eventLoop.OnRight();
                 break;
+            default:
+                return;
         }
+
+        Invalidate();
     }
 
     private void Form1_Load(object sender, EventArgs e)
@@ -58,9 +63,9 @@ public partial class Form1 : Form
         Graphics formGraphics;
         formGraphics = this.CreateGraphics();
  
-        for (int y = 0; y < game.Map.Height; y++)
+        for (int y = 0; y <= game.Map.Height; y++)
         {
-            for (int x = 0; x < game.Map.Width; x++)
+            for (int x = 0; x <= game.Map.Width; x++)
             {
                 if (game.Map.GetTile(x, y))
                 {
