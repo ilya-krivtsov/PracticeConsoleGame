@@ -47,7 +47,7 @@ public class GameRenderer
         Console.SetCursorPosition(_lastPlayerX, _lastPlayerY);
         Console.Write(' ');
 
-        Console.SetCursorPosition(game.Player.X, game.Player.X);
+        Console.SetCursorPosition(game.Player.X, game.Player.Y);
         Console.Write('@');
 
         _lastPlayerX = game.Player.X;

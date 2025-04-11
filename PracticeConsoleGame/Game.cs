@@ -3,17 +3,16 @@ namespace PracticeConsoleGame;
 public class Game
 {
     public Map Map { get; }
-    private GameRenderer renderer;
 
     public Player Player { get; }
+
+    public event Action OnPlayerMove = () => { };
 
     private readonly List<Entity> entities = [];
 
     public Game(EventLoop loop, Map map)
     {
         Map = map;
-        renderer = new(this);
-        renderer.Redraw();
 
         Player = new(map);
         entities.Add(Player);
@@ -36,6 +35,6 @@ public class Game
             entity.Move();
         }
 
-        renderer.Redraw();
+        OnPlayerMove();
     }
 }
