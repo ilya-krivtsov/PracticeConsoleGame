@@ -5,11 +5,11 @@ public class Map
     public const int MaxHeight = 256;
     public const int MaxWidth = 256;
 
-    public char[,] Grid { get; } = new char[MaxHeight, MaxWidth];
+    public char[,] Grid { get; } = new char[MaxWidth, MaxHeight];
     public int PlayerStartX { get; }
     public int PlayerStartY { get; }
 
-    public Entity?[,] Entities { get; } = new Entity?[MaxHeight, MaxWidth];
+    public Entity?[,] Entities { get; } = new Entity?[MaxWidth, MaxHeight];
 
     public int Width { get; private set; }
     public int Height { get; private set; }
@@ -25,13 +25,13 @@ public class Map
             {
                 char c = line[x];
 
-                if (c == '#' || c == '@')
+                if (c == '#' || c == '@' || c == 'M')
                 {
                     Width = Math.Max(Width, x);
                     Height = Math.Max(Height, y);
                 }
 
-                Grid[y, x] = c;
+                Grid[x, y] = c;
 
                 if (c == '@')
                 {
@@ -49,6 +49,6 @@ public class Map
             return false;
         }
 
-        return Grid[y, x] == '#';
+        return Grid[x, y] == '#';
     }
 }

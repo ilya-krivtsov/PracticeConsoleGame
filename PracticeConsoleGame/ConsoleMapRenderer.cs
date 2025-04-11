@@ -36,7 +36,19 @@ public class GameRenderer
             Console.SetCursorPosition(0, y);
             for (int x = 0; x <= game.Map.Width; ++x)
             {
-                Console.Write(game.Map.GetTile(x, y) ? '#' : ' ');
+                var entity = game.Map.Entities[x, y];
+                if (entity is Player)
+                {
+                    Console.Write('@');
+                }
+                else if (entity is Enemy)
+                {
+                    Console.Write('M');
+                }
+                else
+                {
+                    Console.Write(game.Map.GetTile(x, y) ? '#' : ' ');
+                }
             }
             Console.WriteLine();
         }
@@ -44,11 +56,27 @@ public class GameRenderer
 
     public void RedrowPlayer()
     {
-        Console.SetCursorPosition(_lastPlayerX, _lastPlayerY);
-        Console.Write(' ');
-
-        Console.SetCursorPosition(game.Player.X, game.Player.Y);
-        Console.Write('@');
+        for (int y = 0; y <= game.Map.Height; ++y)
+        {
+            Console.SetCursorPosition(0, y);
+            for (int x = 0; x <= game.Map.Width; ++x)
+            {
+                var entity = game.Map.Entities[x, y];
+                if (entity is Player)
+                {
+                    Console.Write('@');
+                }
+                else if (entity is Enemy)
+                {
+                    Console.Write('M');
+                }
+                else
+                {
+                    Console.Write(game.Map.GetTile(x, y) ? '#' : ' ');
+                }
+            }
+            Console.WriteLine();
+        }
 
         _lastPlayerX = game.Player.X;
         _lastPlayerY = game.Player.Y;

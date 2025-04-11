@@ -14,11 +14,28 @@ public class Game
     {
         Map = map;
 
-        Player = new(map);
+        Player = new(this);
         entities.Add(Player);
         Player.X = map.PlayerStartX;
         Player.Y = map.PlayerStartY;
         map.Entities[Player.X, Player.Y] = Player;
+
+        for (int y = 0; y <= map.Height; ++y)
+        {
+            for (int x = 0; x <= map.Width; ++x)
+            {
+                if (map.Grid[x, y] == 'M')
+                {
+                    var enemy = new Enemy(this)
+                    {
+                        X = x,
+                        Y = y
+                    };
+                    map.Entities[x, y] = enemy;
+                    entities.Add(enemy);
+                }
+            }
+        }
 
         loop.LeftKeyPress += () => Move(-1, 0);
         loop.RightKeyPress += () => Move(1, 0);
